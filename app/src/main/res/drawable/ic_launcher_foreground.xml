@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    
+    <!-- Background circle -->
+    <path
+        android:fillColor="#2E7D32"
+        android:pathData="M54,54m-40,0a40,40 0,1 1,80 0a40,40 0,1 1,-80 0"/>
+    
+    <!-- Minecraft grass block style icon -->
+    <!-- Top (grass) -->
+    <path
+        android:fillColor="#5D9B47"
+        android:pathData="M34,34 L74,34 L74,44 L34,44 Z"/>
+    
+    <!-- Dirt layers -->
+    <path
+        android:fillColor="#8B5A2B"
+        android:pathData="M34,44 L74,44 L74,74 L34,74 Z"/>
+    
+    <!-- Dirt texture spots -->
+    <path
+        android:fillColor="#6B4423"
+        android:pathData="M38,50 L42,50 L42,54 L38,54 Z"/>
+    <path
+        android:fillColor="#6B4423"
+        android:pathData="M50,48 L54,48 L54,52 L50,52 Z"/>
+    <path
+        android:fillColor="#6B4423"
+        android:pathData="M62,52 L66,52 L66,56 L62,56 Z"/>
+    <path
+        android:fillColor="#6B4423"
+        android:pathData="M44,60 L48,60 L48,64 L44,64 Z"/>
+    <path
+        android:fillColor="#6B4423"
+        android:pathData="M56,62 L60,62 L60,66 L56,66 Z"/>
+    <path
+        android:fillColor="#6B4423"
+        android:pathData="M66,66 L70,66 L70,70 L66,70 Z"/>
+    <path
+        android:fillColor="#6B4423"
+        android:pathData="M36,66 L40,66 L40,70 L36,70 Z"/>
+    
+    <!-- Grass detail on top -->
+    <path
+        android:fillColor="#7EC850"
+        android:pathData="M36,34 L40,34 L40,38 L36,38 Z"/>
+    <path
+        android:fillColor="#7EC850"
+        android:pathData="M48,34 L52,34 L52,38 L48,38 Z"/>
+    <path
+        android:fillColor="#7EC850"
+        android:pathData="M60,34 L64,34 L64,38 L60,38 Z"/>
+    <path
+        android:fillColor="#7EC850"
+        android:pathData="M70,34 L74,34 L74,38 L70,38 Z"/>
+    
+    <!-- Play button overlay -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:fillAlpha="0.9"
+        android:pathData="M48,50 L48,66 L62,58 Z"/>
+</vector>
