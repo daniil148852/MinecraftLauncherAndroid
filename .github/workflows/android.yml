@@ -1,103 +1,121 @@
+# .github/workflows/android.yml - Updated
 name: Android CI
 
 on:
-  workflow_dispatch: # Оставляем только запуск по кнопке
+  workflow_dispatch:
 
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
+    - name: Checkout code
+      uses: actions/checkout@v4
 
-      - name: Set up JDK 17
-        uses: actions/setup-java@v4
-        with:
-          java-version: '17'
-          distribution: 'temurin'
-          cache: gradle
+    - name: Set up JDK 17
+      uses: actions/setup-java@v4
+      with:
+        java-version: '17'
+        distribution: 'temurin'
+        cache: gradle
 
-      - name: Grant execute permission for gradlew
-        run: chmod +x gradlew
+    - name: Setup Gradle
+      uses: gradle/actions/setup-gradle@v3
+      with:
+        gradle-version: 8.4
 
-      - name: Cache Gradle packages
-        uses: actions/cache@v4
-        with:
-          path: |
-            ~/.gradle/caches
-            ~/.gradle/wrapper
-          key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
-          restore-keys: |
-            ${{ runner.os }}-gradle-
+    - name: Generate Gradle Wrapper
+      run: gradle wrapper --gradle-version 8.4
 
-      - name: Build Debug APK
-        run: ./gradlew assembleDebug
+    - name: Grant execute permission for gradlew
+      run: chmod +x gradlew
 
-      - name: Build Release APK
-        run: ./gradlew assembleRelease
+    - name: Cache Gradle packages
+      uses: actions/cache@v4
+      with:
+        path: |
+          ~/.gradle/caches
+          ~/.gradle/wrapper
+        key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
+        restore-keys: |
+          ${{ runner.os }}-gradle-
 
-      - name: Run Unit Tests
-        run: ./gradlew testDebugUnitTest
+    - name: Build Debug APK
+      run: ./gradlew assembleDebug
 
-      - name: Upload Debug APK
-        uses: actions/upload-artifact@v4
-        with:
-          name: app-debug
-          path: app/build/outputs/apk/debug/app-debug.apk
-          retention-days: 30
+    - name: Build Release APK
+      run: ./gradlew assembleRelease
 
-      - name: Upload Release APK
-        uses: actions/upload-artifact@v4
-        with:
-          name: app-release-unsigned
-          path: app/build/outputs/apk/release/app-release-unsigned.apk
-          retention-days: 30
+    - name: Run Unit Tests
+      run: ./gradlew testDebugUnitTest
+
+    - name: Upload Debug APK
+      uses: actions/upload-artifact@v4
+      with:
+        name: app-debug
+        path: app/build/outputs/apk/debug/app-debug.apk
+        retention-days: 30
+
+    - name: Upload Release APK
+      uses: actions/upload-artifact@v4
+      with:
+        name: app-release-unsigned
+        path: app/build/outputs/apk/release/app-release-unsigned.apk
+        retention-days: 30
 
   release:
     needs: build
     runs-on: ubuntu-latest
-    # Теперь условие проверяет, что запуск был ручной И выбрана ветка main
-    if: github.ref == 'refs/heads/main'
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
+    - name: Checkout code
+      uses: actions/checkout@v4
 
-      - name: Set up JDK 17
-        uses: actions/setup-java@v4
-        with:
-          java-version: '17'
-          distribution: 'temurin'
+    - name: Set up JDK 17
+      uses: actions/setup-java@v4
+      with:
+        java-version: '17'
+        distribution: 'temurin'
 
-      - name: Grant execute permission for gradlew
-        run: chmod +x gradlew
+    - name: Setup Gradle
+      uses: gradle/actions/setup-gradle@v3
+      with:
+        gradle-version: 8.4
 
-      - name: Build Release APK
-        run: ./gradlew assembleRelease
+    - name: Generate Gradle Wrapper
+      run: gradle wrapper --gradle-version 8.4
 
-      - name: Sign APK
-        uses: r0adkll/sign-android-release@v1
-        id: sign_app
-        with:
-          releaseDirectory: app/build/outputs/apk/release
-          signingKeyBase64: ${{ secrets.SIGNING_KEY }}
-          alias: ${{ secrets.ALIAS }}
-          keyStorePassword: ${{ secrets.KEY_STORE_PASSWORD }}
-          keyPassword: ${{ secrets.KEY_PASSWORD }}
-        env:
-          BUILD_TOOLS_VERSION: "34.0.0"
+    - name: Grant execute permission for gradlew
+      run: chmod +x gradlew
 
-      - name: Get version name
-        id: get_version
-        run: |
-          VERSION_NAME=$(grep -oP 'versionName = "\K[^"]+' app/build.gradle.kts)
-          echo "VERSION_NAME=$VERSION_NAME" >> $GITHUB_OUTPUT
+    - name: Build Release APK
+      run: ./gradlew assembleRelease
 
-      - name: Create Release
-        uses: softprops/action-gh-release@v1
-        with:
-          tag_name: v${{ steps.get_version.outputs.VERSION_NAME }}
-          name: Release v${{ steps.get_version.outputs.VERSION_NAME }}
-          files: ${{ steps.sign_app.outputs.signedReleaseFile }}
-          generate_release_notes: true
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    - name: Sign APK
+      uses: r0adkll/sign-android-release@v1
+      id: sign_app
+      with:
+        releaseDirectory: app/build/outputs/apk/release
+        signingKeyBase64: ${{ secrets.SIGNING_KEY }}
+        alias: ${{ secrets.ALIAS }}
+        keyStorePassword: ${{ secrets.KEY_STORE_PASSWORD }}
+        keyPassword: ${{ secrets.KEY_PASSWORD }}
+      env:
+        BUILD_TOOLS_VERSION: "34.0.0"
+
+    - name: Get version name
+      id: get_version
+      run: |
+        VERSION_NAME=$(grep -oP 'versionName = "\K[^"]+' app/build.gradle.kts)
+        echo "VERSION_NAME=$VERSION_NAME" >> $GITHUB_OUTPUT
+
+    - name: Create Release
+      uses: softprops/action-gh-release@v1
+      with:
+        tag_name: v${{ steps.get_version.outputs.VERSION_NAME }}
+        name: Release v${{ steps.get_version.outputs.VERSION_NAME }}
+        files: ${{ steps.sign_app.outputs.signedReleaseFile }}
+        generate_release_notes: true
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
