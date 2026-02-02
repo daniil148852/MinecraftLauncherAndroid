@@ -1,0 +1,204 @@
+{
+  "version": 1,
+  "name": "Default Layout",
+  "buttons": [
+    {
+      "id": "forward",
+      "keyCode": 87,
+      "x": 0.1,
+      "y": 0.5,
+      "width": 0.08,
+      "height": 0.12,
+      "label": "W"
+    },
+    {
+      "id": "left",
+      "keyCode": 65,
+      "x": 0.02,
+      "y": 0.65,
+      "width": 0.08,
+      "height": 0.12,
+      "label": "A"
+    },
+    {
+      "id": "backward",
+      "keyCode": 83,
+      "x": 0.1,
+      "y": 0.65,
+      "width": 0.08,
+      "height": 0.12,
+      "label": "S"
+    },
+    {
+      "id": "right",
+      "keyCode": 68,
+      "x": 0.18,
+      "y": 0.65,
+      "width": 0.08,
+      "height": 0.12,
+      "label": "D"
+    },
+    {
+      "id": "jump",
+      "keyCode": 32,
+      "x": 0.85,
+      "y": 0.7,
+      "width": 0.12,
+      "height": 0.15,
+      "label": "Jump"
+    },
+    {
+      "id": "sneak",
+      "keyCode": 340,
+      "x": 0.02,
+      "y": 0.82,
+      "width": 0.1,
+      "height": 0.1,
+      "label": "Sneak"
+    },
+    {
+      "id": "sprint",
+      "keyCode": 341,
+      "x": 0.14,
+      "y": 0.82,
+      "width": 0.1,
+      "height": 0.1,
+      "label": "Sprint"
+    },
+    {
+      "id": "attack",
+      "keyCode": -1,
+      "x": 0.75,
+      "y": 0.5,
+      "width": 0.1,
+      "height": 0.15,
+      "label": "Attack"
+    },
+    {
+      "id": "use",
+      "keyCode": -2,
+      "x": 0.87,
+      "y": 0.5,
+      "width": 0.1,
+      "height": 0.15,
+      "label": "Use"
+    },
+    {
+      "id": "inventory",
+      "keyCode": 69,
+      "x": 0.5,
+      "y": 0.02,
+      "width": 0.08,
+      "height": 0.08,
+      "label": "E"
+    },
+    {
+      "id": "drop",
+      "keyCode": 81,
+      "x": 0.4,
+      "y": 0.02,
+      "width": 0.08,
+      "height": 0.08,
+      "label": "Q"
+    },
+    {
+      "id": "chat",
+      "keyCode": 84,
+      "x": 0.6,
+      "y": 0.02,
+      "width": 0.08,
+      "height": 0.08,
+      "label": "T"
+    },
+    {
+      "id": "perspective",
+      "keyCode": 294,
+      "x": 0.7,
+      "y": 0.02,
+      "width": 0.08,
+      "height": 0.08,
+      "label": "F5"
+    },
+    {
+      "id": "hotbar_1",
+      "keyCode": 49,
+      "x": 0.1,
+      "y": 0.92,
+      "width": 0.07,
+      "height": 0.07,
+      "label": "1"
+    },
+    {
+      "id": "hotbar_2",
+      "keyCode": 50,
+      "x": 0.185,
+      "y": 0.92,
+      "width": 0.07,
+      "height": 0.07,
+      "label": "2"
+    },
+    {
+      "id": "hotbar_3",
+      "keyCode": 51,
+      "x": 0.27,
+      "y": 0.92,
+      "width": 0.07,
+      "height": 0.07,
+      "label": "3"
+    },
+    {
+      "id": "hotbar_4",
+      "keyCode": 52,
+      "x": 0.355,
+      "y": 0.92,
+      "width": 0.07,
+      "height": 0.07,
+      "label": "4"
+    },
+    {
+      "id": "hotbar_5",
+      "keyCode": 53,
+      "x": 0.44,
+      "y": 0.92,
+      "width": 0.07,
+      "height": 0.07,
+      "label": "5"
+    },
+    {
+      "id": "hotbar_6",
+      "keyCode": 54,
+      "x": 0.525,
+      "y": 0.92,
+      "width": 0.07,
+      "height": 0.07,
+      "label": "6"
+    },
+    {
+      "id": "hotbar_7",
+      "keyCode": 55,
+      "x": 0.61,
+      "y": 0.92,
+      "width": 0.07,
+      "height": 0.07,
+      "label": "7"
+    },
+    {
+      "id": "hotbar_8",
+      "keyCode": 56,
+      "x": 0.695,
+      "y": 0.92,
+      "width": 0.07,
+      "height": 0.07,
+      "label": "8"
+    },
+    {
+      "id": "hotbar_9",
+      "keyCode": 57,
+      "x": 0.78,
+      "y": 0.92,
+      "width": 0.07,
+      "height": 0.07,
+      "label": "9"
+    }
+  ]
+}
