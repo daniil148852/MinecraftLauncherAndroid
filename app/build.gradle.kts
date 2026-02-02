@@ -63,6 +63,8 @@ android {
     packaging {
         resources {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
+            excludes += "/META-INF/NOTICE.md"
+            excludes += "/META-INF/LICENSE.md"
         }
     }
 }
@@ -103,7 +105,8 @@ dependencies {
     implementation(libs.okhttp)
     implementation(libs.okhttp.logging)
     implementation(libs.moshi)
-    ksp(libs.moshi.kotlin)
+    implementation(libs.moshi.kotlin)
+    ksp(libs.moshi.codegen)
 
     // Coroutines
     implementation(libs.kotlinx.coroutines.core)
@@ -117,6 +120,9 @@ dependencies {
 
     // Logging
     implementation(libs.timber)
+
+    // Apache Commons Compress for tar extraction
+    implementation(libs.commons.compress)
 
     // Testing
     testImplementation(libs.junit)
