@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Primary Colors - Minecraft Grass Green -->
+    <color name="green_10">#FF002200</color>
+    <color name="green_20">#FF004400</color>
+    <color name="green_30">#FF006600</color>
+    <color name="green_40">#FF2E7D32</color>
+    <color name="green_50">#FF4CAF50</color>
+    <color name="green_60">#FF66BB6A</color>
+    <color name="green_70">#FF81C784</color>
+    <color name="green_80">#FFA5D6A7</color>
+    <color name="green_90">#FFC8E6C9</color>
+    <color name="green_95">#FFE8F5E9</color>
+
+    <!-- Secondary Colors - Minecraft Dirt Brown -->
+    <color name="brown_10">#FF1A1207</color>
+    <color name="brown_20">#FF33240E</color>
+    <color name="brown_30">#FF4D3615</color>
+    <color name="brown_40">#FF66481C</color>
+    <color name="brown_50">#FF8D6E63</color>
+    <color name="brown_60">#FFA1887F</color>
+    <color name="brown_70">#FFBCAAA4</color>
+    <color name="brown_80">#FFD7CCC8</color>
+    <color name="brown_90">#FFEFEBE9</color>
+
+    <!-- Tertiary Colors - Minecraft Water Blue -->
+    <color name="blue_10">#FF001F33</color>
+    <color name="blue_20">#FF003D66</color>
+    <color name="blue_30">#FF005C99</color>
+    <color name="blue_40">#FF0077B6</color>
+    <color name="blue_50">#FF0096C7</color>
+    <color name="blue_60">#FF00B4D8</color>
+    <color name="blue_70">#FF48CAE4</color>
+    <color name="blue_80">#FF90E0EF</color>
+    <color name="blue_90">#FFCAF0F8</color>
+
+    <!-- Error Colors - Minecraft Lava Red -->
+    <color name="red_10">#FF330000</color>
+    <color name="red_20">#FF660000</color>
+    <color name="red_30">#FF990000</color>
+    <color name="red_40">#FFB71C1C</color>
+    <color name="red_50">#FFD32F2F</color>
+    <color name="red_60">#FFE53935</color>
+    <color name="red_70">#FFEF5350</color>
+    <color name="red_80">#FFEF9A9A</color>
+    <color name="red_90">#FFFFCDD2</color>
+
+    <!-- Neutral Colors - Stone Gray -->
+    <color name="gray_0">#FF000000</color>
+    <color name="gray_10">#FF1A1A1A</color>
+    <color name="gray_20">#FF333333</color>
+    <color name="gray_30">#FF4D4D4D</color>
+    <color name="gray_40">#FF666666</color>
+    <color name="gray_50">#FF808080</color>
+    <color name="gray_60">#FF999999</color>
+    <color name="gray_70">#FFB3B3B3</color>
+    <color name="gray_80">#FFCCCCCC</color>
+    <color name="gray_90">#FFE6E6E6</color>
+    <color name="gray_95">#FFF2F2F2</color>
+    <color name="gray_100">#FFFFFFFF</color>
+
+    <!-- Special Minecraft Colors -->
+    <color name="minecraft_green">#FF5D9B47</color>
+    <color name="minecraft_brown">#FF8B5A2B</color>
+    <color name="minecraft_stone">#FF7F7F7F</color>
+    <color name="minecraft_wood">#FFBC9862</color>
+    <color name="minecraft_diamond">#FF4AEDD9</color>
+    <color name="minecraft_gold">#FFDDAA00</color>
+    <color name="minecraft_iron">#FFD8D8D8</color>
+    <color name="minecraft_redstone">#FFAA0000</color>
+    <color name="minecraft_lapis">#FF345EC3</color>
+    <color name="minecraft_emerald">#FF17DD62</color>
+    <color name="minecraft_nether_portal">#FF9B4DCA</color>
+    <color name="minecraft_enchant">#FFB388FF</color>
+
+    <!-- Version Type Colors -->
+    <color name="version_release">#FF4CAF50</color>
+    <color name="version_snapshot">#FF0096C7</color>
+    <color name="version_old_beta">#FF8D6E63</color>
+    <color name="version_old_alpha">#FF808080</color>
+
+    <!-- Mod Loader Colors -->
+    <color name="mod_fabric">#FFDBD0B4</color>
+    <color name="mod_forge">#FF3E4B5C</color>
+    <color name="mod_quilt">#FF9B59B6</color>
+    <color name="mod_neoforge">#FFD86518</color>
+
+    <!-- Surface Colors -->
+    <color name="surface_dark">#FF121212</color>
+    <color name="surface_dark_elevated">#FF1E1E1E</color>
+    <color name="surface_light">#FFFFFBFE</color>
+    <color name="surface_light_dim">#FFF5F5F5</color>
+
+    <!-- Legacy Colors (for compatibility) -->
+    <color name="primary">#FF4CAF50</color>
+    <color name="primary_dark">#FF2E7D32</color>
+    <color name="primary_light">#FF81C784</color>
+    <color name="accent">#FF00B4D8</color>
+    <color name="background_light">#FFFFFFFF</color>
+    <color name="background_dark">#FF121212</color>
+    <color name="text_primary_light">#FF000000</color>
+    <color name="text_primary_dark">#FFFFFFFF</color>
+    <color name="text_secondary_light">#FF666666</color>
+    <color name="text_secondary_dark">#FFB3B3B3</color>
+</resources>
