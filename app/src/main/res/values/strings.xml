@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MC Launcher</string>
+
+    <!-- Navigation -->
+    <string name="nav_home">Home</string>
+    <string name="nav_versions">Versions</string>
+    <string name="nav_profiles">Profiles</string>
+    <string name="nav_mods">Mods</string>
+    <string name="nav_accounts">Accounts</string>
+    <string name="nav_settings">Settings</string>
+
+    <!-- Home Screen -->
+    <string name="play">PLAY</string>
+    <string name="cancel">Cancel</string>
+    <string name="no_profile_selected">No Profile Selected</string>
+    <string name="no_account">No Account</string>
+    <string name="select_profile">Select a profile</string>
+    <string name="select_account">Select an account</string>
+    <string name="recent_profiles">Recent Profiles</string>
+    <string name="view_all">View All</string>
+
+    <!-- Versions Screen -->
+    <string name="versions">Versions</string>
+    <string name="search_versions">Search versions...</string>
+    <string name="filter">Filter</string>
+    <string name="releases">Releases</string>
+    <string name="snapshots">Snapshots</string>
+    <string name="old_beta">Old Beta</string>
+    <string name="old_alpha">Old Alpha</string>
+    <string name="installed_only">Installed Only</string>
+    <string name="latest_release">Latest Release</string>
+    <string name="latest_snapshot">Latest Snapshot</string>
+    <string name="download">Download</string>
+    <string name="downloading">Downloading...</string>
+    <string name="installed">Installed</string>
+    <string name="delete">Delete</string>
+    <string name="delete_version">Delete Version?</string>
+    <string name="delete_version_message">Are you sure you want to delete %s? This will remove all downloaded files for this version.</string>
+
+    <!-- Profiles Screen -->
+    <string name="profiles">Profiles</string>
+    <string name="new_profile">New Profile</string>
+    <string name="create_profile">Create Profile</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="profile_name">Profile Name</string>
+    <string name="game_version">Game Version</string>
+    <string name="mod_loader">Mod Loader</string>
+    <string name="vanilla">Vanilla</string>
+    <string name="memory">Memory</string>
+    <string name="allocated_ram">Allocated RAM</string>
+    <string name="resolution">Resolution</string>
+    <string name="width">Width</string>
+    <string name="height">Height</string>
+    <string name="fullscreen">Fullscreen</string>
+    <string name="advanced">Advanced</string>
+    <string name="jvm_arguments">JVM Arguments</string>
+    <string name="game_arguments">Game Arguments</string>
+    <string name="save">Save</string>
+    <string name="duplicate">Duplicate</string>
+    <string name="delete_profile">Delete Profile?</string>
+    <string name="delete_profile_message">Are you sure you want to delete \"%s\"? This action cannot be undone.</string>
+
+    <!-- Accounts Screen -->
+    <string name="accounts">Accounts</string>
+    <string name="add_account">Add Account</string>
+    <string name="add_offline_account">Add Offline Account</string>
+    <string name="login_with_microsoft">Login with Microsoft</string>
+    <string name="username">Username</string>
+    <string name="offline">Offline</string>
+    <string name="microsoft">Microsoft</string>
+    <string name="active">Active</string>
+    <string name="expired">Expired</string>
+    <string name="edit_username">Edit Username</string>
+    <string name="refresh_token">Refresh Token</string>
+    <string name="delete_account">Delete Account?</string>
+    <string name="delete_account_message">Are you sure you want to delete the account \"%s\"? This action cannot be undone.</string>
+
+    <!-- Mods Screen -->
+    <string name="mods">Mods</string>
+    <string name="add_mod">Add Mod</string>
+    <string name="search_mods">Search mods...</string>
+    <string name="enabled">Enabled</string>
+    <string name="disabled">Disabled</string>
+    <string name="enable">Enable</string>
+    <string name="disable">Disable</string>
+    <string name="delete_mod">Delete Mod?</string>
+    <string name="delete_mod_message">Are you sure you want to delete \"%s\"? This will remove the mod file.</string>
+    <string name="no_mods">No Mods</string>
+    <string name="no_profile_for_mods">Select a profile to manage its mods</string>
+    <string name="vanilla_profile">This is a vanilla profile without a mod loader</string>
+
+    <!-- Settings Screen -->
+    <string name="settings">Settings</string>
+    <string name="java_runtime">Java Runtime</string>
+    <string name="java_version">Java Version</string>
+    <string name="not_installed">Not installed</string>
+    <string name="install">Install</string>
+    <string name="game_defaults">Game Defaults</string>
+    <string name="default_ram">Default RAM</string>
+    <string name="default_fullscreen">Default Fullscreen</string>
+    <string name="version_filters">Version Filters</string>
+    <string name="show_releases">Show Releases</string>
+    <string name="show_snapshots">Show Snapshots</string>
+    <string name="show_old_beta">Show Old Beta</string>
+    <string name="show_old_alpha">Show Old Alpha</string>
+    <string name="controls">Controls</string>
+    <string name="control_scale">Control Scale</string>
+    <string name="control_opacity">Control Opacity</string>
+    <string name="vibration">Vibration</string>
+    <string name="downloads">Downloads</string>
+    <string name="concurrent_downloads">Concurrent Downloads</string>
+    <string name="verify_downloads">Verify Downloads</string>
+    <string name="appearance">Appearance</string>
+    <string name="theme">Theme</string>
+    <string name="system">System</string>
+    <string name="light">Light</string>
+    <string name="dark">Dark</string>
+    <string name="dynamic_colors">Dynamic Colors</string>
+    <string name="storage">Storage</string>
+    <string name="game_data">Game Data</string>
+    <string name="clear_cache">Clear Cache</string>
+    <string name="clear_cache_message">This will delete cached files. Downloaded versions and profiles will not be affected.</string>
+    <string name="miscellaneous">Miscellaneous</string>
+    <string name="keep_screen_on">Keep Screen On</string>
+    <string name="show_console">Show Console</string>
+    <string name="danger_zone">Danger Zone</string>
+    <string name="reset_settings">Reset Settings</string>
+    <string name="reset_settings_message">This will restore all settings to their default values.</string>
+
+    <!-- Console -->
+    <string name="console">Console</string>
+    <string name="auto_scroll">Auto-scroll</string>
+    <string name="copy">Copy</string>
+    <string name="clear">Clear</string>
+    <string name="info">Info</string>
+    <string name="warning">Warning</string>
+    <string name="error">Error</string>
+    <string name="debug">Debug</string>
+
+    <!-- Notifications -->
+    <string name="download_channel_name">Downloads</string>
+    <string name="download_channel_description">Download progress notifications</string>
+    <string name="game_channel_name">Game</string>
+    <string name="game_channel_description">Game status notifications</string>
+    <string name="downloading_version">Downloading %s</string>
+    <string name="download_complete">Download Complete</string>
+    <string name="download_failed">Download Failed</string>
+
+    <!-- Errors -->
+    <string name="error_no_account">Please add an account first</string>
+    <string name="error_no_profile">Please select a profile</string>
+    <string name="error_version_not_found">Version not found</string>
+    <string name="error_download_failed">Download failed</string>
+    <string name="error_launch_failed">Failed to launch game</string>
+    <string name="error_java_not_installed">Java Runtime not installed</string>
+
+    <!-- Common -->
+    <string name="ok">OK</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="confirm">Confirm</string>
+    <string name="dismiss">Dismiss</string>
+    <string name="loading">Loading...</string>
+    <string name="retry">Retry</string>
+    <string name="back">Back</string>
+    <string name="close">Close</string>
+    <string name="add">Add</string>
+    <string name="edit">Edit</string>
+    <string name="options">Options</string>
+    <string name="details">Details</string>
+</resources>
